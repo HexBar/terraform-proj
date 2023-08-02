@@ -220,7 +220,7 @@ resource "azurerm_virtual_machine_extension" "web_user_data_script" {
 
   settings = <<SETTINGS
   {
-    "commandToExecute": "git clone https://gitlab.com/sela-1090/students/hexbar/terraform.git && bash /var/lib/waagent/custom-script/download/0/terraform/terraform-infrastructure/scripts/web-user-data.sh"
+    "commandToExecute": "git clone https://github.com/HexBar/terraform-proj.git && bash /var/lib/waagent/custom-script/download/0/terraform-proj/terraform-infrastructure/scripts/web-user-data.sh"
   }
   SETTINGS
   depends_on = [
@@ -290,7 +290,7 @@ resource "azurerm_virtual_machine_extension" "db_user_data_script" {
 
   settings = <<SETTINGS
   {
-    "commandToExecute": "git clone https://gitlab.com/sela-1090/students/hexbar/terraform.git && bash /var/lib/waagent/custom-script/download/0/terraform/terraform-infrastructure/scripts/db-user-data.sh"
+    "commandToExecute": "git clone https://github.com/HexBar/terraform-proj.git && bash /var/lib/waagent/custom-script/download/0/terraform-proj/terraform-infrastructure/scripts/db-user-data.sh"
   }
   SETTINGS
   depends_on = [
