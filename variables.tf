@@ -25,7 +25,7 @@ variable "vnet_name" {
 variable "subnet_name" {
     type            = string
     description     = "subnet_name"
-    default         = "-flowers-subnet"
+    default         = "-snet"
 }
 
 variable "location" {

@@ -2,3 +2,6 @@
 .terraform\providers\registry.terraform.io\hashicorp\azurerm\2.99.0\windows_386\terraform-provider-azurerm_v2.99.0_x5.exe
 .terraform\providers\registry.terraform.io\hashicorp\local\2.4.0\windows_386\terraform-provider-local_v2.4.0_x5.exe
 .terraform\providers\registry.terraform.io\hashicorp\tls\4.0.4\windows_386\terraform-provider-tls_v4.0.4_x5.exe
+*.pem
+.terraform.tfstate.lock.info
+terraform.tfstate
