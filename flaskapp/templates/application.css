@@ -1,0 +1,49 @@
+body {
+    background-image: url("./Background.gif");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+form {
+    background-color: white;
+    border: 1px solid black;
+    padding: 30px;
+    max-width: 300px;
+    margin: auto;
+    border-radius: 3px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 0.5px solid black;
+    border-radius: 0.5px;
+}
+
+input[type="button"] {
+    background-color: limegreen;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+input[type="button"]:hover {
+    background-color: aqua;
+}

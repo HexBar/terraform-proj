@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="application.css"/>
+
+        <link rel="icon" type="image/x-icon" href="Icon.png"/>
+        <title>Application</title>
+    </head>
+    <body>
+        <h1>Enter Name & Age</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br><br>
+
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" name="weight"><br><br>
+            
+            <input type="button" value="Submit" onclick="submitForm()">
+        </form>
+        
+
+        <script>
+            function submitForm() {
+                var name = document.getElementById("name").value;
+                var age = document.getElementById("age").value;
+                var weight = document.getElementById("weight").value;
+
+                alert("Name: " + name + "\nAge: " + age + "\nWeight: "+ weight);
+            }
+            // Create a JSON object with the form data
+            var data = {
+                "name": name,
+                "age": age,
+                "weight": weight
+            };
+
+            // Send a POST request to the Flask app with the form data
+            fetch('/data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response if necessary
+                alert(data.database_status);
+            })
+            .catch(error => {
+                // Handle any errors that occur during the POST request
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>
+
