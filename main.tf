@@ -244,7 +244,7 @@ resource "azurerm_linux_virtual_machine" "db_vm" {
   name                  = "${var.vm_name}db-${var.project_name}"
   resource_group_name   = azurerm_resource_group.WeightTracker_rg.name
   location              = azurerm_resource_group.WeightTracker_rg.location
-  network_interface_ids = [azurerm_network_interface.db_terraform_nic.id]
+  network_interface_ids = [azurerm_network_interface.db_nic.id]
   size                  = "Standard_DS1_v2"
   admin_username        = "azureuser"
   computer_name         = "db-vm"
